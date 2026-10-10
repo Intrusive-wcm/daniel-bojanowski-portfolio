@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent 24%, rgba(255, 255, 255, 0.07) 52%, transparent 78%),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.075) 0, rgba(255, 255, 255, 0.075) 1px, rgba(70, 84, 96, 0.052) 1px, rgba(70, 84, 96, 0.052) 2px),
+    linear-gradient(112deg, #d5dade 0%, #c5cdd3 43%, #d4d9dc 71%, #c4ccd2 100%);
+  color: var(--text-primary);
+  font-family: Inter, Aptos, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.42), transparent 21rem),
+    radial-gradient(circle at 84% 20%, rgba(72, 125, 172, 0.09), transparent 25rem),
+    radial-gradient(circle at 70% 82%, rgba(49, 143, 124, 0.055), transparent 27rem);
+  content: "";
+}
+
+body.nav-open,
+body.modal-open {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(34, 107, 176, 0.68);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-primary);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  margin-bottom: 22px;
+  font-size: clamp(2.65rem, 4.25vw, 4.35rem);
+  font-weight: 640;
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-size: clamp(2rem, 3.2vw, 3.3rem);
+  font-weight: 620;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: clamp(1.22rem, 1.8vw, 1.55rem);
+  font-weight: 650;
+}
+
+h4 {
+  margin-bottom: 8px;
+  font-size: 1.02rem;
+  font-weight: 650;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+::selection {
+  background: rgba(45, 121, 191, 0.22);
+  color: var(--text-primary);
+}
