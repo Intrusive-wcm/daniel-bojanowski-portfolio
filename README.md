@@ -26,8 +26,6 @@ npm run build
 npm run preview
 ```
 
-Open http://localhost:4173/daniel-bojanowski-portfolio/ to review the production build.
-
 ## Deployment
 
 GitHub Actions builds the site and deploys only `dist/` to GitHub Pages on pushes to `main`. The workflow can also be run manually. Set **Settings → Pages → Source** to **GitHub Actions**. Vite's base path is `/daniel-bojanowski-portfolio/`.
